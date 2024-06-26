@@ -19,7 +19,7 @@ public class ImageController {
     private final ImageService imageService;
 
     @PostMapping("")
-    ApiResponse<Image> createProduct(@RequestBody @Valid ImageRequest imageRequest) {
+    ApiResponse<Image> createImage(@RequestBody @Valid ImageRequest imageRequest) {
         return ApiResponse.<Image>builder()
                 .message("Image created")
                 .result(imageService.createImage(imageRequest))
